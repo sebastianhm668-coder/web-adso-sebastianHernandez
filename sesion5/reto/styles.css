@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 2rem 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: antiquewhite;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: crimson;
+}
+
+.formulario {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+fieldset {
+    margin: 0 0 1.5rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid #e4e7eb;
+    border-radius: 12px;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: 600;
+    color: crimson;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+.grupo {
+    margin-bottom: 1rem;
+}
+
+/* Campos con ancho completo */
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font: inherit;
+}
+
+/* Foco visible */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid green;
+    outline-offset: 2px;
+    border-color: green;
+}
+
+/* Opciones tipo radio y checkbox */
+.opcion {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-right: 1rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.opcion input[type="radio"],
+.opcion input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+}
+
+.campo-checkbox {
+    margin-top: 0.75rem;
+}
+
+/* Manejo de estados e invalidación requerida */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid,
+.invalido {
+    border-color: red;
+    background-color: #fde8e8;
+}
+
+.error {
+    display: block;
+    min-height: 1.2rem;
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.boton {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background-color: crimson;
+    color: #fff;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.boton:hover {
+    background-color: darkred;
+}
+
+.boton:focus-visible {
+    outline: 3px solid crimson;
+    outline-offset: 3px;
+}
+
+#resumen {
+    max-width: 520px;
+    margin: 1.5rem auto 0;
+}

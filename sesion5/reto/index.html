@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción a Cursos Complementarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>Inscripción a Cursos</h1>
+
+        <form action="#" id="formInscripcion" class="formulario">
+            <!-- FIELDSET 1: Datos personales -->
+            <fieldset>
+                <legend>Datos personales</legend>
+
+                <!-- Nombre completo -->
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" minlength="3" required>
+                    <small id="error-nombre" class="error"></small>
+                </div>
+
+                <!-- Documento -->
+                <div class="campo">
+                    <label for="documento">Documento</label>
+                    <input type="text" id="documento" name="documento" inputmode="numeric" pattern="[0-9]{6,10}" required>
+                    <small id="error-documento" class="error"></small>
+                </div>
+
+                <!-- Correo -->
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" required>
+                    <small id="error-correo" class="error"></small>
+                </div>
+
+                <!-- Celular -->
+                <div class="campo">
+                    <label for="telefono">Celular</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="3[0-9]{9}" required>
+                    <small id="error-telefono" class="error"></small>
+                </div>
+            </fieldset>
+
+            <!-- FIELDSET 2: Curso -->
+            <fieldset>
+                <legend>Curso</legend>
+
+                <!-- Programa -->
+                <div class="campo">
+                    <label for="programa">Programa</label>
+                    <select name="programa" id="programa" required>
+                        <option value="">Selecciona un curso</option>
+                        <option value="desarrollo-web">Desarrollo Web Frontend</option>
+                        <option value="python-basico">Programación en Python</option>
+                        <option value="analisis-datos">Análisis de Datos</option>
+                    </select>
+                    <small id="error-programa" class="error"></small>
+                </div>
+
+                <!-- Jornada -->
+                <fieldset class="grupo">
+                    <legend>Jornada</legend>
+                    <label class="opcion">
+                        <input type="radio" name="jornada" value="manana" required> Mañana
+                    </label>
+                    <label class="opcion">
+                        <input type="radio" name="jornada" value="tarde" required> Tarde
+                    </label>
+                    <label class="opcion">
+                        <input type="radio" name="jornada" value="noche" required> Noche
+                    </label>
+                    <small id="error-jornada" class="error"></small>
+                </fieldset>
+
+                <!-- Autorización de datos -->
+                <div class="campo-checkbox">
+                    <label for="terminos" class="opcion">
+                        <input type="checkbox" id="terminos" name="terminos" required> Autorizo el tratamiento de datos personales
+                    </label>
+                    <small id="error-terminos" class="error"></small>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="boton">Inscribirme</button>
+        </form>
+
+        <!-- Sección vacía para resumen posterior -->
+        <section id="resumen"></section>
+    </main>
+</body>
+</html>
